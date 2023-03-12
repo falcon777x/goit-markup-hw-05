@@ -16,6 +16,8 @@ p {
 }
 img {
 	display: block;
+	width: 100%;
+	height: auto;
 }
 .section {
 	margin-top: 0;
@@ -77,6 +79,10 @@ a {
 	letter-spacing: 0.02em;
 
 	color: var(--primary-title-color);
+
+	transition-property: color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation-links .link:focus,
@@ -101,6 +107,10 @@ a {
 	letter-spacing: 0.02em;
 
 	color: var(--primary-text-color);
+	
+	transition-property: color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address:focus,
@@ -149,6 +159,10 @@ a {
 	border: none;
 	background-color: #4d5ae5;
 	color: #fff;
+
+	transition-property: background-color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-section-button:hover,
 .hero-section-button:focus {
@@ -192,6 +206,31 @@ h2 {
 	color: var(--primary-title-color);
 }
 
+/* doing overlay window on card --------------------*/
+.portfolio-card-item {
+	position: relative;
+	overflow: hidden;
+
+}
+
+.portfolio-card-overlay {
+	background-color: #4D5AE5;
+	color: #F4F4FD;
+	
+	padding: 40px 32px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	transform: translateY(100%);
+	transition: transform 0.25s linear;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	overflow: auto;
+	}
+/* ------------------------------------------------- */
+
+
 .kind-of-content {
 	font-family: Roboto;
 	font-style: normal;
@@ -221,6 +260,10 @@ h2 {
 	align-items: center;
 	text-align: center;
 	letter-spacing: 0.04em;
+
+	transition-property: color, border-color, background-color ;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filters-buttons:focus,
@@ -256,8 +299,6 @@ body {
 .fourth-section {
 	padding-top: 120px;
 	padding-bottom: 120px;
-	/* max-width: 1440px;
-	margin: 0 auto; */
 }
 
 .our-team-title {
@@ -298,7 +339,8 @@ footer {
 .nav-link-item {
 	display: block;
 	padding-top: 24px;
-	padding-bottom: 24px;
+	padding-bottom: 14px;  
+	/* i have changed it from 24px to 14px to put blue-line on hero section */
 }
 
 .nav-link-item:last-child {
@@ -347,7 +389,6 @@ nav {
 	align-items: center;
 	border-radius: 4px;
 	margin-bottom: 8px;
-	/* background-color: aqua; */
 }
 
 /* ----------------------------------------------------------- */
@@ -405,6 +446,9 @@ nav {
 .portfolios:hover,
 .portfolios:focus {
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+.portfolio-card-item-list:hover .portfolio-card-overlay {
+	transform: translateY(0);
 }
 .portfolios {
 	display: block;
@@ -466,6 +510,10 @@ address {
 	height: 100%;
 	border-radius: 50%;
 	background-color: #4d5ae5;
+
+	transition-property: background-color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-social-link:hover,
 .card-social-link:focus {
@@ -486,12 +534,18 @@ address {
 .customers-list {
 	display: flex;
 	justify-content: space-between;
+
+
 }
 .customers-list-item {
 	width: 168px;
 	height: 88px;
 	border: 1px solid #8e8f99;
 	border-radius: 4px;
+
+	transition-property: color, border-color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-list-link {
 	display: flex;
@@ -500,17 +554,19 @@ address {
 	justify-content: center;
 	align-items: center;
 	color: #8e8f99;
+
+	transition-property: color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	
 }
-/* .customers-list-link:hover,
-.customers-list-link:focus {
-	border-color: #404bbf;
-	color: #404bbf;
-} */
-.customers-list-item:hover,
-.customers-list-item:hover .customers-list-link
+
+.customers-list-item:hover, .customers-list-item:hover .customers-list-link
  {
 	border-color: #404bbf;
 	color: #404bbf;
+	/* fill: #404bbf; */
 
 }
 .customers-list-item:focus-within .customers-list-link {
@@ -523,6 +579,10 @@ address {
 	fill: currentColor;
 }
 
+/* .customers-list-item:hover .customers-list-icon {
+	fill: #404bbf;
+  } */
+  
 /* --------------------------------------footer section------------------------------------ */
 
 .footer-line {
@@ -557,6 +617,10 @@ address {
 	height: 100%;
 	border-radius: 50%;
 	background-color: rgba(255, 255, 255, 0.1);
+
+	transition-property: background-color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-media-icon {
 	color: #fff;
@@ -565,3 +629,77 @@ address {
 .social-media-link:focus {
 	background-color: #31d0aa;
 }
+/* ----------------------------------------------------------animation---------------------------- */
+/* a:hover,
+a:focus,
+.button:hover,
+.button:focus,
+.filters-buttons,
+.hero-section-button,
+.customers-list-item,
+.customers-list-item:focus-within .customers-list-link
+.customers-list-item:hover .customers-list-link {
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+} */
+
+
+  .navigation-links .active::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 4px;
+	background-color: var(--hover-link-color); /* change to the desired color */
+	margin-top: 5px; 
+	/* adjust to the desired distance from the link */
+	border-radius: 2px;
+	position: relative;
+	bottom: -14.5px;
+  }
+
+
+  /* transition-property: background-color;
+    transition-duration: 250ms; 
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+
+	.backdrop {
+		width: 100%;
+		height: 100%;
+		background-color: rgba(46, 47, 66, 0.4);
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		transition: opacity, visibility;
+		transition-duration: 250ms; 
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	.modal {
+		width: 408px;
+		height: 576px;
+		border-radius: 4px;
+		background-color: #FCFCFC;
+		padding: 20px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.modal-close {
+		width: 24px;
+		height: 24px;
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		background-color: #E7E9FC;
+
+		border-radius: 50%;
+		display: flex;
+		margin-left: auto;
+		/* to do crist in the middle */
+		align-items: center;
+		justify-content: center;
+	}
+	.is-hidden {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
