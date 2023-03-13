@@ -90,6 +90,7 @@ a {
 	color: var(--hover-link-color);
 }
 
+
 /* .navigation-links:last-child  */
 
 .border-header {
@@ -169,6 +170,10 @@ a {
 	background-color: var(--hover-link-color);
 }
 
+button, input[type="button"], input[type="submit"] {
+	cursor: pointer;
+  }
+
 /* ----------------------------------------------------------------------------------------------------------------- */
 h3 {
 	font-size: 20px;
@@ -228,6 +233,7 @@ h2 {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	overflow: auto;
 	}
+	
 /* ------------------------------------------------- */
 
 
@@ -431,7 +437,7 @@ nav {
 	padding: 0;
 	row-gap: 48px;
 }
-
+portfolio-card-item-list
 .portfolio-title h2 {
 	margin-bottom: 8px;
 }
@@ -656,6 +662,9 @@ a:focus,
 	position: relative;
 	bottom: -14.5px;
   }
+  nav .link.active {
+	color: var(--hover-link-color);
+  }  
 
 
   /* transition-property: background-color;
@@ -702,4 +711,9 @@ a:focus,
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
+	}
+
+	.modal-close:hover {
+		border-color: var(--hover-link-color);
+		background-color: var(--hover-link-color);
 	}
