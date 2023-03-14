@@ -645,21 +645,8 @@ address {
 	background-color: #31d0aa;
 }
 /* ----------------------------------------------------------animation---------------------------- */
-/* a:hover,
-a:focus,
-.button:hover,
-.button:focus,
-.filters-buttons,
-.hero-section-button,
-.customers-list-item,
-.customers-list-item:focus-within .customers-list-link
-.customers-list-item:hover .customers-list-link {
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-} */
 
-
-  .navigation-links .active::after {
+ .navigation-links .active::after {
 	content: '';
 	display: block;
 	width: 100%;
@@ -674,11 +661,6 @@ a:focus,
   nav .link.active {
 	color: var(--hover-link-color);
   }  
-
-
-  /* transition-property: background-color;
-    transition-duration: 250ms; 
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 
 	.backdrop {
 		width: 100%;
@@ -735,9 +717,3 @@ a:focus,
 	.modal-close:hover .modal-close-btn-icon {
 		fill: #F4F4FD;
 	}
-
-	/* .modal-close-btn-icon {
-		transition-property: color;
-		transition-duration: 2500ms; 
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	} */
