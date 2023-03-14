@@ -267,7 +267,7 @@ h2 {
 	text-align: center;
 	letter-spacing: 0.04em;
 
-	transition-property: color, border-color, background-color ;
+	transition-property: color, border-color, background-color, box-shadow;
     transition-duration: 250ms; 
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
