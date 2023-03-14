@@ -707,6 +707,10 @@ a:focus,
 		/* to do crist in the middle */
 		align-items: center;
 		justify-content: center;
+          /*add transition to border color   */
+		transition-property: border-color;
+		transition-duration: 250ms; 
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	}
 	.is-hidden {
 		opacity: 0;
@@ -718,3 +722,14 @@ a:focus,
 		border-color: var(--hover-link-color);
 		background-color: var(--hover-link-color);
 	}
+
+	/* this we need to change cross color during closing the window  */
+	.modal-close:hover .modal-close-btn-icon {
+		fill: #F4F4FD;
+	}
+
+	/* .modal-close-btn-icon {
+		transition-property: color;
+		transition-duration: 2500ms; 
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	} */
